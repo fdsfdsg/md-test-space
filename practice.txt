@@ -1,1 +1,3 @@
 voicypil main()
+void main()
+오류 수정했습니다. 
