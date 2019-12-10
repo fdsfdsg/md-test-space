@@ -31,11 +31,27 @@
 ## 👩‍💻 Getting Started
 다음과 같은 순서로 api 서버를 실행할 수 있습니다.  
 
-구름IDE 기준으로
+구름IDE 기준으로 (nodejs 스택을 선택하고 mongodb 설치 옵션을 선택 한경우)
 
-1. alt + shift + t를 눌러 새로운 터미널을 하나 열어줍니다.
+1. 모듈 설치
+```bash
+$ yarn
+```
+2. .env 파일 복사
+```bash
+$ cp server/.env.example server/.env
+```
 
-2. 열린 터미널에 다음과 같이 입력하여 mongodb를 실행합니다.
+3. .env에 다음과 같이 환경변수를 채우고 mongodb url을 적어줍니다.
+```bash
+NODE_ENV=development
+MONGO_DB=mongodb://localhost:27017/db  # 데이터베이스 이름은 아무거나 쓰셔도됩니다.
+                                       # 본인의 mongodb host를 적어주세요.(아무것도 설정하지 않았다면 27017이 defalt값입니다.)
+```
+
+4. alt + shift + t를 눌러 새로운 터미널을 하나 열어줍니다.
+
+5. 열린 터미널에 다음과 같이 입력하여 mongodb를 실행합니다.
 ```bash
 $ mongod
 ```
@@ -44,15 +60,12 @@ $ mongod
 이제 mongodb를 사용할 준비가 끝났습니다.
 mongodb를 접속하는 url은 mongodb://localhost:27017가 됩니다.
 
-3. .env에 다음과 같이 mongodb url을 적어주세요
-```bash
-MONGO_DB=mongodb://localhost:27017/myDB  # 데이터베이스 이름은 아무거나 쓰셔도됩니다.
-```
-4. 새로운 터미널을 열어 아래와 같이 입력해보고 실행이 됨을 확인합니다.
+6. 새로운 터미널을 열어 아래와 같이 입력해보고 서버 실행이 됨을 확인합니다.
 ```bash
 $ yarn run start-server
 ```
-5. 만약, maintainer분이 소스코드의 특정 모듈이 의도된 대로 정확히 작동하는지 검증하기 위해 유닛테스트를 통과하도록 요구
+
+7. 만약, maintainer분이 소스코드의 특정 모듈이 의도된 대로 정확히 작동하는지 검증하기 위해 유닛테스트를 통과하도록 요구
 하신다면 새로운 터미널에서 아래와 같이 입력해보고 실행이 됨을 확인합니다.
 ```bash
 $ yarn test
@@ -60,34 +73,8 @@ $ yarn test
 작업 중에는 api를 직접 호출하는 방식으로 작업해도 되지만 해당 데이터베이스에는 데이터가 없기때문에 ```yarn test```를 
 통해 올바르게 작업이 진행되고 있는지 확인하면서 진행하는 것을 추천드립니다.
 
-5. 모든 준비가 완료되었으니 개발을 시작합니다.
-
-***
-
-1. 모듈 설치
-```bash
-$ yarn
-```
-
-2. .env 파일 복사
-```bash
-$ cp server/.env.example server/.env
-```
-3. .env 파일 내용 채워넣기
-  - api 서버 개발시에는 `MONGO_DB`, `NODE_ENV`만 있으면 됩니다.
-  ```
-  NODE_ENV=development
-  MONGO_DB=mongodb://localhost:27017/db # 본인의 mongodb host를 적어주세요.(아무것도 설정하지 않았다면 27017이 defalt값입니다.)
-  ``` 
-4. 서버 실행
-```bash
-$ yarn run start-server
-```
-
-## Testing
-다음 명령어로 테스트가 가능합니다.
-```bash
-$ yarn test
-```
 [jest](https://jestjs.io/)를 사용하고 있으며,  
-jest의 사용방법은 해당 문서를 참고해주세요.
+jest의 사용방법은 해당 문서를 참고해주시면됩니다.
+
+8. 모든 준비가 완료되었으니 개발을 시작합니다.
+
