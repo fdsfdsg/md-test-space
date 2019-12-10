@@ -60,7 +60,7 @@ $ mongod
 아무런 옵션도 주지 않았기때문에 27017에 mongodb가 실행되게 됩니다.
 
 이제 mongodb를 사용할 준비가 끝났습니다.
-mongodb를 접속하는 url은 mongodb://localhost:27017가 됩니다.
+mongodb를 접속하는 url은 ```mongodb://localhost:27017```가 됩니다.
 
 6. 새로운 터미널을 열어 아래와 같이 입력해보고 서버 실행이 됨을 확인합니다.
 ```bash
