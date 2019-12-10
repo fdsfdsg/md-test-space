@@ -49,7 +49,9 @@ MONGO_DB=mongodb://localhost:27017/db  # 데이터베이스 이름은 아무거�
                                        # 본인의 mongodb host를 적어주세요.(아무것도 설정하지 않았다면 27017이 defalt값입니다.)
 ```
 
-4. alt + shift + t를 눌러 새로운 터미널을 하나 열어줍니다.
+
+4. ```alt + shift + t```를 눌러 새로운 터미널을 하나 열어줍니다.
+
 
 5. 열린 터미널에 다음과 같이 입력하여 mongodb를 실행합니다.
 ```bash
