@@ -1,5 +1,4 @@
-## APollo-2020 repo의 server-side project
-
+## [apollo-2020](https://github.com/fdsfdsg/apollo-2020)의 server-side repo
 (REST API를 graph ql이 감싸도록 함)
 
 dependency : graphql-yoga, nodemon ( 내가 파일을 수정할떄마다 서버를 재시작해줌)
